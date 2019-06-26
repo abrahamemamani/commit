@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
+:root {
+  --first-font: 'Quicksand', sans-serif;
+  --light-grey: #F5F5F5;
+  --first-color: #3179F1;
+  --second-color: #18CAAE;
+  /*
+    --first-color   : #FE9D24;
+    --second-color  : #0D66D0;
+    */ }
+
+/*
+$first-color : #FE9D24;
+$second-color: #0D66D0;
+*/
+.first-color {
+  --color: var(--first-color); }
+
+.second-color {
+  --color: var(--second-color); }
+
+body {
+  font-family: var(--first-font); }
+
+figure {
+  margin: 0; }
+
+ul {
+  margin-bottom: 0;
+  padding-left: 0; }
+
+.m-btn {
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  line-height: 1.5;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  cursor: pointer; }
+
+.btn-curve {
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  color: var(--color);
+  border: 2px solid var(--color);
+  background-color: transparent;
+  transition: all .25s ease; }
+  .btn-curve:hover {
+    color: #fff;
+    background-color: var(--color); }
+
+.app-header__bar-top {
+  background-color: var(--light-grey);
+  padding: 7px 0;
+  font-size: .85rem; }
+  .app-header__bar-top-lang {
+    padding-right: 1.4em;
+    border-right: 1px solid #cfcfcf;
+    cursor: pointer; }
+    .app-header__bar-top-lang .is-icon {
+      line-height: 0;
+      vertical-align: middle;
+      font-size: 1rem; }
+  .app-header__bar-top-wish {
+    margin-left: 1.7em;
+    cursor: pointer; }
+    .app-header__bar-top-wish .is-icon {
+      line-height: 0;
+      vertical-align: middle;
+      font-size: .7rem;
+      margin-right: .25em; }
