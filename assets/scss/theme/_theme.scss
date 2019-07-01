@@ -1,13 +1,15 @@
 // ### Look and feel de la web (características propias; colores, fuentes, etc.) ###
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500&display=swap');
 
 :root{
     --first-font    : 'Quicksand', sans-serif;
     --light-grey    : #F5F5F5;
     --first-color   : #3179F1;
     --second-color  : #18CAAE;
+    --third-color   : #546E7A;
+    --fourth-color  : #FE9D24;
+    --fifth-color   : #FF2E39;
     /*
-    --first-color   : #FE9D24;
     --second-color  : #0D66D0;
     */
 }
@@ -23,4 +25,13 @@ $second-color: #0D66D0;
 }
 .second-color{
     --color : var(--second-color);
+}
+.third-color{
+    --color : var(--third-color);
+}
+.fourth-color{
+    --color : var(--fourth-color);
+}
+.fifth-color{
+    --color : var(--fifth-color);
 }

@@ -2,26 +2,89 @@
     &__bar-top{
         background-color: var(--light-grey);
         padding: 7px 0;
-        font-size: .85rem;
-        &-lang{
-            padding-right: 1.4em;
-            border-right: 1px solid darken($light-grey, 15%);
+        font: {
+            size: .85rem;
+            weight: 500;
+        }
+        &-lang, &-wish{
             cursor: pointer;
+            transition: all .15s ease;
+            &:hover{
+                color: var(--color);
+            }
             .is-icon{
                 line-height: 0;
                 vertical-align: middle;
+            }
+        }
+        &-lang{
+            margin-right: 1.4em;
+            .is-icon{
                 font-size: 1rem;
             }
         }
         &-wish{
-            margin-left: 1.7em;
-            cursor: pointer;
+            margin-left: 1.6em;
             .is-icon{
-                line-height: 0;
-                vertical-align: middle;
                 font-size: .7rem;
                 margin-right: .25em;
             }
         }
     }
+    &__brand{
+        height: 65px;
+    }
+    &__main-wrapper{
+        padding: 20px 0;
+    }
+    &__my-cart{
+        &-container{
+            --size-cart-top: 20px;
+
+            cursor: pointer;
+            .is-icon{
+                font-size: 2.75em;
+                vertical-align: middle;
+                position: relative;
+                &::before{
+                    content: "0";
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                    height: var(--size-cart-top);
+                    width: var(--size-cart-top);
+                    background-color: var(--color);
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: var(--size-cart-top);
+                    color: #fff;
+                    font: {
+                        family: var(--first-font);
+                        weight: 500;
+                        size: .8rem;
+                    }
+                }
+            }
+        }
+        &-data{
+            margin-left: .7em;
+        }
+        &-price{
+            color: darken($light-grey, 25%);
+            font: {
+                size: .95em;
+                weight: 500;
+            }
+        }
+        &-title{
+            font: {
+                size: .95em;
+                weight: bold;
+            }
+        }
+    }
+}
+.line-vertical{
+    width: 1px;
+    background-color: darken($light-grey, 15%);
 }

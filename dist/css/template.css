@@ -1,11 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500&display=swap");
 :root {
   --first-font: 'Quicksand', sans-serif;
   --light-grey: #F5F5F5;
   --first-color: #3179F1;
   --second-color: #18CAAE;
+  --third-color: #546E7A;
+  --fourth-color: #FE9D24;
+  --fifth-color: #FF2E39;
   /*
-    --first-color   : #FE9D24;
     --second-color  : #0D66D0;
     */ }
 
@@ -18,6 +20,15 @@ $second-color: #0D66D0;
 
 .second-color {
   --color: var(--second-color); }
+
+.third-color {
+  --color: var(--third-color); }
+
+.fourth-color {
+  --color: var(--fourth-color); }
+
+.fifth-color {
+  --color: var(--fifth-color); }
 
 body {
   font-family: var(--first-font); }
@@ -54,23 +65,128 @@ ul {
     color: #fff;
     background-color: var(--color); }
 
+.m-form-field {
+  /*
+    display: block;
+    width: 100%;
+    */
+  height: calc(2.25rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
+
+.m-input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%; }
+  .m-input-group .m-input-left {
+    position: relative; }
+    .m-input-group .m-input-left::after {
+      content: '';
+      background-color: #ebebeb;
+      position: absolute;
+      top: 50%;
+      right: -.5em;
+      width: 1px;
+      height: 60%;
+      transform: translateY(-50%); }
+  .m-input-group .m-form-field {
+    font-size: .85em;
+    font-weight: 500; }
+    .m-input-group .m-form-field:focus {
+      outline: none; }
+    .m-input-group .m-form-field:nth-child(1) {
+      height: 45px;
+      border-right: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; }
+    .m-input-group .m-form-field:nth-child(2) {
+      height: 45px;
+      border-left: none;
+      border-right: none;
+      border-radius: 0;
+      padding-left: 1.5em;
+      padding-right: 4.5em; }
+  .m-input-group .btn {
+    height: 45px;
+    border-radius: 0 50px 50px 0;
+    font-weight: 500;
+    padding-left: 20px;
+    padding-right: 30px;
+    background-color: var(--color);
+    color: #fff; }
+
 .app-header__bar-top {
   background-color: var(--light-grey);
   padding: 7px 0;
-  font-size: .85rem; }
-  .app-header__bar-top-lang {
-    padding-right: 1.4em;
-    border-right: 1px solid #cfcfcf;
-    cursor: pointer; }
-    .app-header__bar-top-lang .is-icon {
+  font-size: .85rem;
+  font-weight: 500; }
+  .app-header__bar-top-lang, .app-header__bar-top-wish {
+    cursor: pointer;
+    transition: all .15s ease; }
+    .app-header__bar-top-lang:hover, .app-header__bar-top-wish:hover {
+      color: var(--color); }
+    .app-header__bar-top-lang .is-icon, .app-header__bar-top-wish .is-icon {
       line-height: 0;
-      vertical-align: middle;
+      vertical-align: middle; }
+  .app-header__bar-top-lang {
+    margin-right: 1.4em; }
+    .app-header__bar-top-lang .is-icon {
       font-size: 1rem; }
   .app-header__bar-top-wish {
-    margin-left: 1.7em;
-    cursor: pointer; }
+    margin-left: 1.6em; }
     .app-header__bar-top-wish .is-icon {
-      line-height: 0;
-      vertical-align: middle;
       font-size: .7rem;
       margin-right: .25em; }
+
+.app-header__brand {
+  height: 65px; }
+
+.app-header__main-wrapper {
+  padding: 20px 0; }
+
+.app-header__my-cart-container {
+  --size-cart-top: 20px;
+  cursor: pointer; }
+  .app-header__my-cart-container .is-icon {
+    font-size: 2.75em;
+    vertical-align: middle;
+    position: relative; }
+    .app-header__my-cart-container .is-icon::before {
+      content: "0";
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      height: var(--size-cart-top);
+      width: var(--size-cart-top);
+      background-color: var(--color);
+      border-radius: 50%;
+      text-align: center;
+      line-height: var(--size-cart-top);
+      color: #fff;
+      font-family: var(--first-font);
+      font-weight: 500;
+      font-size: .8rem; }
+
+.app-header__my-cart-data {
+  margin-left: .7em; }
+
+.app-header__my-cart-price {
+  color: #b5b5b5;
+  font-size: .95em;
+  font-weight: 500; }
+
+.app-header__my-cart-title {
+  font-size: .95em;
+  font-weight: bold; }
+
+.line-vertical {
+  width: 1px;
+  background-color: #cfcfcf; }
